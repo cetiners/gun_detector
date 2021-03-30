@@ -2,9 +2,14 @@
 from keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 
-def loader(split_type, target_size = (150,150), batch_size=32,*argz, **kwargs):
-    train_datagen = ImageDataGenerator(rescale=1./255, *argz, **kwargs)
-    training_set = train_datagen.flow_from_directory(("data/cooked/"+split_type), target_size = target_size, batch_size = batch_size, class_mode = 'binary')
+def loader(split_type, augmentation, target_size = (150,150), batch_size=32,*argz, **kwargz):
+    if augmentation == False:
+        train_datagen = ImageDataGenerator(rescale=1./255)
+        training_set = train_datagen.flow_from_directory(("data/cooked/"+split_type), target_size = target_size, batch_size = batch_size, class_mode = 'binary')
+
+    else:
+        train_datagen = ImageDataGenerator(rescale=1./255,*argz, **kwargz)
+        training_set = train_datagen.flow_from_directory(("data/cooked/"+split_type), target_size = target_size, batch_size = batch_size, class_mode = 'binary')
 
     return training_set
 

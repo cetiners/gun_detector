@@ -9,7 +9,7 @@ def train_plot(history,epochs):
     ax1.set_yticks(np.arange(0, 1, 0.1))
 
     ax2.plot(history.history['acc'], color='b', label="Training accuracy")
-    ax2.plot(history.history['val_acc'], color='r',label="Validation accuracy")
+    ax2.plot(history.hßistory['val_acc'], color='r',label="Validation accuracy")
     ax2.set_xticks(np.arange(1, epochs, 1))
 
     legend = plt.legend(loc='best', shadow=True)

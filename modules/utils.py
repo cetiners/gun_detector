@@ -27,8 +27,9 @@ def sorter(train_size, test_size, valid_size):
 
 def cleaner(folder_name):
     for cat in ["others","pistols"]:
-        # delete the files on the cooked folder before changing the split sizes to avoid duplication
+        # delete the files on the cooked folder before changing the split sizes to avoid duplication & ease of upload
         for file in os.listdir("data/cooked/"+folder_name+"/"+cat):
             os.remove(os.path.join("data/cooked/"+folder_name+"/"+cat, file))
 
-
+def pürpak():
+    [cleaner(i) for i in ["train","test","validation"]];
