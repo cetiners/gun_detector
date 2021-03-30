@@ -1,4 +1,3 @@
-from keras.preprocessing.image import ImageDataGenerator
 import os
 import shutil
 
@@ -31,13 +30,5 @@ def cleaner(folder_name):
         # delete the files on the cooked folder before changing the split sizes to avoid duplication
         for file in os.listdir("data/cooked/"+folder_name+"/"+cat):
             os.remove(os.path.join("data/cooked/"+folder_name+"/"+cat, file))
-
-    
-
-def loader(split_type, target_size = (150,150), batch_size=32):
-    train_datagen = ImageDataGenerator(rescale = 1./255)
-    training_set = train_datagen.flow_from_directory(("data/cooked/"+split_type), target_size = target_size, batch_size = batch_size, class_mode = 'binary')
-
-    return training_set
 
 
