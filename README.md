@@ -1,10 +1,10 @@
-## THREAT TYPE DETECTOR -BINARY IMAGE CLASSIFICATION WITH CNN's
+## Binary Image Classification with Convolutional Neural Networks
 
 Please refer to the master_notebook for the proposed model. 
 
 #### Scope & Data Source
 
-In this project, the main objective is to create a CNN model using Keras API that can successfully classify Knife vs Pistol images.
+This project is created for the Deep Learning course in NOVA Information Management School. The main objective is to create a CNN model using Keras API that can successfully classify Knife vs Pistol images.
 
 To accomodate the need for training images of guns, knives and similar hand-held objects were gathered from the database published by the Andalusian Research Institute in Data Science and Computational Intelligence, “Weapons detection for security and video surveillance”.
 
