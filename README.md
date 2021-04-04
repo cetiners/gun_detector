@@ -1,9 +1,10 @@
 ## THREAT TYPE DETECTOR -BINARY IMAGE CLASSIFICATION WITH CNN's
 
+Please refer to the master_notebook for the proposed model. 
 
 #### Scope & Data Source
 
-In this project, the main objective is to create a CNN model using Keras API that can successfully classify Knife vs Pistol images to determine the threat type of a crime taking place.
+In this project, the main objective is to create a CNN model using Keras API that can successfully classify Knife vs Pistol images.
 
 To accomodate the need for training images of guns, knives and similar hand-held objects were gathered from the database published by the Andalusian Research Institute in Data Science and Computational Intelligence, “Weapons detection for security and video surveillance”.
 
@@ -11,4 +12,7 @@ This dataset was used as it consists of handheld and standalone shots of guns, k
 
 https://github.com/ari-dasci/OD-WeaponDetection
 
+####
+
+Feel free to fork and provide feedback.
 
