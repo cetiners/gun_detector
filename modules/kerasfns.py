@@ -40,18 +40,17 @@ def pred_perf(model,test_set):
     return preds
 
 def hist_acc(hist):
-    plt.subplot(1,2,1)
     plt.title("Cross Entropy Loss")
+    plt.figure(figsize=(18,8))
     plt.plot(hist.history["loss"], color="blue", label="Train")
     plt.plot(hist.history["val_loss"], color="orange", label="Validation")
     plt.legend()
 
-    plt.subplot(1,2,2)
     plt.title("Accuracy")
+    plt.figure(figsize=(18,8))
     plt.plot(hist.history["accuracy"], color="blue", label="Train")
     plt.plot(hist.history["val_accuracy"], color="orange", label="Validation")
     plt.legend()
     plt.show()
-
 
 
